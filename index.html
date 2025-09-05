@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        display: block;
+        margin: 20px;
+      }
+      input[type='checkbox'],
+      input[type='radio'] {
+        display: inline;
+        margin: 20px;
+      }
+      form {
+        margin: 50px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+  
+
+    <form action="адреса серверу" method="метод відправки данних">
+
+    <fieldset>
+      <input type="text" pattern="^\+380\d{3}\d{2}\d{2}\d{2}$/" name="text" />
+      <input type="color" name="color" />
+      <input type="date" name="data" />
+      <input type="number" name="number" />
+      <input type="time" name="time" />
+      <input type="file" name="file" />
+      <input type="range" min="1" max="10" name="range" />
+      <textarea name="bigText" cols="10" rows="10">Многострочное поле ввода</textarea>
+      <input type="submit" value="просто кнопка" />
+    </fieldset>
+    </form>
+
+    <form action="http://localhost/" method="get">
+      <fieldset>
+        <legend>Первая форма</legend>
+
+        <label for="firstName">Ваше имя</label>
+        <input type="text" value="your name" name="firstName" id="firstName" />
+
+        <label for="secondName">
+          Ваша фамилия
+          <input type="text" placeholder="your secondName" name="secondName" id="secondName" />
+        </label>
+
+        <hr />
+        <input type="checkbox" name="1" />
+        <input type="checkbox" name="2" />
+        <input type="checkbox" checked name="3" />
+        <br />
+        <input type="radio" name="qwe" />
+        <input type="radio" name="qwe" />
+        <input type="radio" checked name="qwe" />
+
+        <input type="button" value="отправить" />
+      </fieldset>
+    </form>
+
+    <form action="http://localhost/" method="GET">
+      <fieldset>
+        <legend>Вторая форма кнопки, атрибуты</legend>
+        <input type="email" name="email" autofocus autocomplete="off" required />
+        <input type="url" readonly value="server.php" />
+        <input type="tel" disabled value="просто Текст" />
+
+        <input type="submit" value="отправить" />
+        <input type="reset" value="Сбросить" />
+        <button type="submit">первый с кнопкой</button>
+        <button type="button">второй с кнопкой</button>
+
+      </fieldset>
+    </form>
+
+    <form action="http://localhost/" method="GET">
+      <fieldset>
+        <legend>Третья форма особые поля</legend>
+
+        <select name="місто">
+          <option value="перше місто">Київ</option>
+          <option value="друге місто">Харків</option>
+          <option value="третє місто">Львів</option>
+          <option value="четверте місто">Одесса</option>
+        </select>
+
+        <input type="text" list="browsers" name="browser" />
+
+        <datalist id="browsers">
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Safari"></option>
+          <option value="Yandex"></option>
+          <option value="Opera"></option>
+        </datalist>
+
+        <input type="submit" value="отправить" />
+      </fieldset>
+    </form>
+  </body>
+</html>
